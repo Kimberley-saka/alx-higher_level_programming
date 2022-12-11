@@ -1,0 +1,1 @@
+This directory comprises of python files that cover: importing functions from another file and hoow to use them, creating a module and how to prevent code in your script from being executed when imported
