@@ -1,0 +1,122 @@
+The ``print_square`` module
+
+==========================
+
+
+
+Using ``print_square``
+
+---------------------
+
+
+
+First import ``print_square`` from the ``print_square`` module:
+
+
+
+	>>> print_square = __import__('4-print_square').print_square
+
+
+
+Now use it:
+
+
+
+	>>> print_square(0)
+
+
+
+	>>> print_square(2)
+
+	##
+
+	##
+
+
+
+	>>> print_square(2.0)
+
+	Traceback (most recent call last):
+
+	...
+
+	TypeError: size must be an integer
+
+
+
+	>>> print_square(None)
+
+	Traceback (most recent call last):
+
+	...
+
+	TypeError: size must be an integer
+
+
+
+	>>> print_square(-2)
+
+	Traceback (most recent call last):
+
+	...
+
+	ValueError: size must be >= 0
+
+
+
+	>>> print_square()
+
+	Traceback (most recent call last):
+
+		...
+
+	TypeError: print_square() missing 1 required positional argument: 'size'==========================
+How to Use 0-add_integer.py
+
+===========================
+
+
+
+This module defines an integer addition function ``add_integer(a, b=98)``.
+
+
+
+Usage
+
+=====
+
+
+
+``add_integer(...)``` returns the addition of its two arguments. For numbers,
+
+that value is equivalent to using the ``+`` operator.
+
+
+
+::
+
+
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+    >>> add_integer(2, 3)
+
+    5
+
+
+
+::
+
+
+
+    >>> add_integer(2, -3)
+
+    -1
+
+
+
+The function also works with floating-point values.
+
+
+
+::
