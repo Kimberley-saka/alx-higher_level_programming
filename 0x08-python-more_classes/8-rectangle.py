@@ -61,8 +61,8 @@ class Rectangle():
                 raise ValueError("height must be >= 0")
         else:
             raise TypeError("height must be an integer")
-   
-   def area(self):
+
+    def area(self):
         """Returns the current rectangle area."""
         return self.__width * self.__height
 
