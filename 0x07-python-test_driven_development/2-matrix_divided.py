@@ -32,4 +32,4 @@ def matrix_divided(matrix, div):
         raise TypeError(div_type_e)
     if div is 0:
         raise ZeroDivisionError(div_zero_e)
-    return [[round(nb / div, 2) for nb in row] for row in matrix]i
+    return [[round(nb / div, 2) for nb in row] for row in matrix]
