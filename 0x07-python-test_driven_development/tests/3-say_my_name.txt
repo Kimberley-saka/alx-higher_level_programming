@@ -22,7 +22,7 @@ Now use it:
 
 
 
-	>>> say_my_name(98, "Saka")
+	>>> say_my_name(98, "Kimberley")
 
 	Traceback (most recent call last):
 
@@ -32,7 +32,7 @@ Now use it:
 
 
 
-	>>> say_my_name(None, "Saka")
+	>>> say_my_name(None, "Kimberley")
 
 	Traceback (most recent call last):
 
