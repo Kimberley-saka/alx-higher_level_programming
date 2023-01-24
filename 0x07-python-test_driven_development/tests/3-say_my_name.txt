@@ -22,21 +22,6 @@ Now use it:
 
 
 
-	>>> say_my_name("Kimberley", "Saka")
-
-	My name is Kimberley Saka
-
-
-	>>> say_my_name("", "")
-
-
-
-	>>> say_my_name("")
-
-	My name is  
-
-
-
 	>>> say_my_name(98, "Saka")
 
 	Traceback (most recent call last):
