@@ -22,4 +22,5 @@ if __name__ == '__main__':
     rows_selected = cursor.fetchall()
 
     for row in rows_selected:
-        print(tuple(row))
+        print(row)
+    db_connect.close()
