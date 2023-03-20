@@ -13,13 +13,13 @@ if __name__ == '__main__':
     from the database.
     """
     db_connect = MySQLdb.connect(
-        host="localhost", user=argv[1], port=3306, password=argv[2], database=argv[3])
+        username=argv[1], port=3306, password=argv[2], database=argv[3])
 
     cursor = db_connect.cursor()
 
-    cursor.execute("SELECT * FROM states")
+    cursor.execute("SELECT * FROM states ORDER BY states.id ASC")
 
     rows_selected = cursor.fetchall()
 
     for row in rows_selected:
-        print(row)
+        print(tuple(row))
