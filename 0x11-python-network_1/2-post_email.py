@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import urllib.request
-import sys
-import urllib.parse
 """
 Send a post request with an email as a parameter
 """
+import urllib.request
+import sys
+import urllib.parse
 
 
 if __name__ == "__main__":
