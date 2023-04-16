@@ -7,13 +7,12 @@ Send a post request with an email as a parameter
 """
 
 
-url = sys.argv[1]
-email = sys.argv[2]
-
 if __name__ == "__main__":
-    post_email = urllib.parse.urlencode({'email': email})
-    data = post_email.encode('ascii')
+    url = sys.argv[1]
+    email = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(email).encode("ascii")
 
-    with urllib.request.urlopen(url, data) as response:
+    request = urllib.request.Request(url, data)
+    with urllib.request.urlopen(request) as response:
         url_response = response.read().decode('utf-8')
         print(f'{url_response}')
