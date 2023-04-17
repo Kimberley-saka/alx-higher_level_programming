@@ -8,9 +8,9 @@ urllib.error.HTTPError exceptions and print: Error cod
 
 if __name__ == "__main__":
     url = sys.argv[1]
+    request = urllib.request.Request(url)
     try:
-        with urllib.request.urlopen(url) as response:
-            url_response = response.read().decode('utf-8')
-            print(url_response)
+        with urllib.request.urlopen(request) as response:
+            print(esponse.read().decode('ascii'))
     except urllib.error.HTTPError as error:
         print(f'Error code: {error.code}')
