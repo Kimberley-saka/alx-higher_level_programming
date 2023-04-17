@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-import urllib.request
-import sys
-import urllib.error
 """
 urllib.error.HTTPError exceptions and print: Error cod
 """
+import urllib.request
+import sys
+import urllib.error
+
 
 if __name__ == "__main__":
     url = sys.argv[1]
