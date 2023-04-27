@@ -1,27 +1,26 @@
 #!/usr/bin/python3
 """
-This script lists all states from the
-database `hbtn_0e_0_usa`.
+Select names that start with N and order them
+in ascending order by id
 """
-
+import sys
 import MySQLdb
-from sys import argv
 
-if __name__ == '__main__':
-    """
-    Access to the database and get the states
-    from the database.
-    """
-    db_connect = MySQLdb.connect(
-        username=argv[1], port=3306, password=argv[2], database=argv[3])
 
-    cursor = db_connect.cursor()
-
-    cursor.execute("SELECT * FROM states WHERE NAME LIKE 'N%' /
+if __name__ == "__main__":
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    db_name = sys.argv[3]
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=mysql_username,
+                         passwd=mysql_password,
+                         db=db_name)
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM states WHERE NAME LIKE 'N%'\
                    ORDER BY states.id ASC")
-
-    rows_selected = cursor.fetchall()
-
-    for row in rows_selected:
+    rows = cursor.fetchall()
+    for row in rows:
         print(row)
-    db_connect.close()
+    cursor.close()
+    db.close()
